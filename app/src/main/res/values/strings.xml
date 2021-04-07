@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">KIMovies</string>
+    <string name="create_movie">Create movie</string>
+    <string name="display_movies">Display movies</string>
+    <string name="display_favourite_movies">Display favourite movies</string>
+    <string name="edit_movies">Edit movies</string>
+    <string name="search_movie">Search movie</string>
+    <string name="movie_ratigns">Movie ratigns</string>
+    <string name="textview">TextView</string>
+</resources>
