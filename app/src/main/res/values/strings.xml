@@ -14,5 +14,12 @@
     <string name="rate_numbers_only_1_10">Rate: numbers only 1-10</string>
     <string name="review_some_feedback">Review: some feedback</string>
     <string name="save">Save</string>
+    <string name="button">Button</string>
+    <string name="movies">Movies</string>
     <string name="back">Back</string>
+    <string name="is_favourite">Is favourite</string>
+    <string name="edit_movie">Edit movie</string>
+    <string name="update">update</string>
+    <string name="click_to_any_movie_to_add_remove_it_to_from_favourite_list">Click to any movie to add/remove it to/from favourite list</string>
+    <string name="favourite_movies">Favourite movies</string>
 </resources>

@@ -14,23 +14,25 @@ public class StorageManager extends SQLiteOpenHelper {
     public static final String COL2 = "title";
     public static final String COL3 = "year";
     public static final String COL4 = "director";
+    public static final String COL5 = "isFavourite";
     public static final String COL6 = "rate";
     public static final String COL7 = "review";
 
 
     public StorageManager(Context context) {
-        super(context, DATABASE_NAME, null, 1);
+        super(context, DATABASE_NAME, null, 3);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
         String createTable = "CREATE TABLE " + TABLE_NAME
-                + "(" + COL1 + "INTEGER PRIMARY KEY AUTOINCREMENT, "
-                + COL2 + "TEXT, "
-                + COL3 + "TEXT, "
-                + COL4 + "TEXT, "
-                + COL6 + "TEXT, "
-                + COL7 + "TEXT);";
+                + "(" + COL1 + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+                + COL2 + " TEXT, "
+                + COL3 + " TEXT, "
+                + COL4 + " TEXT, "
+                + COL5 + " INTEGER DEFAULT 0, "
+                + COL6 + " TEXT, "
+                + COL7 + " TEXT);";
         db.execSQL(createTable);
     }
 
@@ -75,6 +77,28 @@ public class StorageManager extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         String query = "SELECT * FROM " + TABLE_NAME;
         Cursor data = db.rawQuery(query, null);
+        return data;
+    }
+
+    public Cursor getItemID(String name){
+        SQLiteDatabase db = this.getWritableDatabase();
+        String query = "SELECT "
+                + COL1 + " FROM " + TABLE_NAME
+                + " WHERE " + COL2 + " = '" + name + "'";
+
+        Cursor data = db.rawQuery(query, null);
+        return data;
+    }
+
+    public Cursor getItemById(String id) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        Cursor data = db.rawQuery(
+                "select * from "
+                        + this.TABLE_NAME
+                        + " where "
+                        + this.COL1 + "='" + id + "'" , null
+        );
         return data;
     }
 }
