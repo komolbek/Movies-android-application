@@ -6,6 +6,66 @@
     android:layout_height="match_parent"
     tools:context=".CreateMovie">
 
+    <EditText
+        android:id="@+id/createMovieYearText"
+        android:layout_width="288dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:hint="@string/year"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/createMovieTitleText"
+        app:layout_constraintStart_toStartOf="@+id/createMovieTitleText"
+        app:layout_constraintTop_toBottomOf="@+id/createMovieTitleText"
+        app:layout_constraintVertical_bias="0.042"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/createMovieReviewText"
+        android:layout_width="288dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/review_some_feedback"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/createMovieRateText"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/createMovieRateText"
+        app:layout_constraintTop_toBottomOf="@+id/createMovieRateText"
+        app:layout_constraintVertical_bias="0.0"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/createMovieRateText"
+        android:layout_width="288dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:hint="@string/rate_numbers_only_1_10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/createMovieCastText"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/createMovieCastText"
+        app:layout_constraintTop_toBottomOf="@+id/createMovieCastText"
+        app:layout_constraintVertical_bias="0.064"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/createMovieCastText"
+        android:layout_width="288dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:hint="@string/cast"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/createMovieDirectorText"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/createMovieDirectorText"
+        app:layout_constraintTop_toBottomOf="@+id/createMovieDirectorText"
+        app:layout_constraintVertical_bias="0.064"
+        android:autofillHints="" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -17,4 +77,45 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.037"
         tools:text="@string/create_movie" />
+
+    <EditText
+        android:id="@+id/createMovieTitleText"
+        android:layout_width="292dp"
+        android:layout_height="44dp"
+        android:ems="10"
+        android:hint="@string/title"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.294"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/createMovieDirectorText"
+        android:layout_width="288dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:hint="@string/director"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/createMovieYearText"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/createMovieYearText"
+        app:layout_constraintTop_toBottomOf="@+id/createMovieYearText"
+        app:layout_constraintVertical_bias="0.056"
+        android:autofillHints="" />
+
+    <Button
+        android:id="@+id/createMovieSaveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginBottom="24dp"
+        android:text="@string/save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
